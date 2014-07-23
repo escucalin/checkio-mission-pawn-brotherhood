@@ -12,7 +12,7 @@ TESTS = {
         {
             "input": ["b4", "d4", "f4", "c3", "e3", "g5", "d2"],
             "answer": 6,
-            "explanation": ["c3"]
+            "explanation": ["d2"]
         },
         {
             "input": ["b4", "c4", "d4", "e4", "f4", "g4", "e5"],
@@ -74,9 +74,9 @@ TESTS = {
             "explanation": ["a2", "b4", "c6", "d8", "e1", "f3", "g5", "h8"]
         },
         {
-            "input": ["b6", "a7", "b8", "c7", "f1", "g2", "h2", "f3"],
+            "input": ["b6", "a7", "b8", "c7", "g1", "f2", "h2", "g3"],
             "answer": 6,
-            "explanation": ["b6", "f1"]
+            "explanation": ["b6", "g1"]
         },
 
 
