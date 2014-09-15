@@ -24,6 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,7 +44,7 @@
      id="namedview564"
      showgrid="false"
      inkscape:zoom="0.78132857"
-     inkscape:cx="607.76699"
+     inkscape:cx="448.42302"
      inkscape:cy="293.20388"
      inkscape:window-x="0"
      inkscape:window-y="24"
@@ -1300,14 +1301,14 @@
     </g>
     <text
        id="text546"
-       transform="matrix(1, 0, 0, 1, 600, 127)">
+       x="564.76184"
+       y="127">
       <tspan
-         x="-46.547"
-         y="18"
+         x="518.21484"
+         y="145"
          font-size="48"
          id="tspan548"
-         font-family="Roboto-Bold"
-         fill="#294270">safe</tspan>
+         style="font-size:48px;fill:#294270;font-family:Roboto-Bold">seguro</tspan>
     </text>
     <g
        id="g550">
@@ -1335,14 +1336,14 @@
     </g>
     <text
        id="text560"
-       transform="matrix(1, 0, 0, 1, 600, 432)">
+       x="569.00427"
+       y="432">
       <tspan
-         x="-73.641"
-         y="18"
+         x="495.36328"
+         y="450"
          font-size="48"
          id="tspan562"
-         font-family="Roboto-Bold"
-         fill="#294270">unsafe</tspan>
+         style="font-size:48px;fill:#294270;font-family:Roboto-Bold">inseguro</tspan>
     </text>
   </g>
 </svg>
