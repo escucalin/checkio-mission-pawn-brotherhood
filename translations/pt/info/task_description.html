@@ -1,0 +1,70 @@
+<p>
+    Quase todo mundo conhece o antigo jogo de <a href="http://pt.wikipedia.org/wiki/Xadrez">xadrez</a>
+    e tem pelo menos conhece as regras básicas.
+    O jogo tem diferentes unidades, com uma grande variedade de movimento que permitem que haja
+    um grande número de posições possíveis nos jogos diferentes (por exemplo
+    <a href="http://oeis.org/A048987"> Número de possíveis jogos de xadrez ao término da n-ésima jogada. </a>)
+    Para esta missão, vamos examinar os movimentos e comportamento dos peões de xadrez.
+</p>
+
+
+<p>
+    O xadrez é um jogo de estratégia em que dois jogadores utilizam um tabuleiro
+    dispostos em oito linhas (identificadas com números de 1 a 8) e oito colunas 
+    (identificadas com letras A a H) de quadrados.
+    Cada quadrado do tabuleiro é identificado pelo seu próprio e único par de coordenadas — 
+    uma letra e um número (ex: "A1", "h8", "d6").
+    Para esta missão, só vamos trabalhar com os peões.
+    Um peão pode capturar uma peça adversária em um quadrado na diagonal da frente, 
+    em uma coluna adjacente, se movendo para este quadrado. Os peões brancos movem-se para o lado 
+    que tem números maiores.
+</p>
+
+<p>
+    Um peão é geralmente uma unidade fraca, mas temos que 8 deles que podemos ser usados para construir 
+    um muro defensivo de peões.
+    Com essa estratégia, um peão defende os outros.
+    Um peão está seguro quando outro peão pode capturar uma unidade onde ele está.
+    Temos apenas peões brancos no tabuleiro de xadrez, vários deles.
+    Você deve fazer um código para encontrar quantos peões estão seguros.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" width="600px"/>
+    <img class="for_editor_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" width="380px"/>
+</p>
+
+<p>
+    Você receberá uma série de coordenadas de quadrados onde serão colocados os peões brancos.
+    Você deve contar quantos peões são seguros.
+</p>
+<p>
+    <strong>Entrada: </strong> Coordenadas dos peões colocados como uma lista de strings.
+</p>
+
+<p>
+    <strong>Saída: </strong> O número de peões seguros como um inteiro.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemplo:</strong>
+    </p>
+    <pre class="brush: python">
+safe_pawns({"b4", "d4", "f4", "c3", "e3", "g5", "d2"}) == 6
+safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Onde é usado: </strong>
+    Para um jogo IA uma das importantes tarefas é a habilidade de estimar o estado do jogo.
+    Este conceito vai mostrar como você pode fazer isto nas simples posições de figuras de Xadrez.
+</p>
+
+<p>
+    <strong>Condições prévias:</strong><br>
+    0 &lt; pawns &le; 8
+</p>
