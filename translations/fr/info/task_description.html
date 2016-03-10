@@ -1,0 +1,66 @@
+<p>
+    Le jeu d'échecs est très populaire ( <a href="http://en.wikipedia.org/wiki/Chess">Chess</a> )
+    et chacun a une certaine connaissance des règles de base.
+    La variété des mouvements autorisés pour les différentes pièces du jeu permet un très grand nombre de configurations
+    lors des parties (par exemple
+    <a href="http://oeis.org/A048987">Nombre de configurations du jeu d'échecs après le n-ième coup.</a>)
+    Dans cette mission, nous allons étudier les mouvements et comportement des pions du jeu d'échecs.
+</p>
+<p>
+    Le jeu d'échecs est un jeu de stratégie à deux joueurs qui se joue sur un échiquier de 64 cases carrées 
+    organisées  sur  huit lignes (numérotées de 1 à 8) et huit colonnes (repérées par les lettres de a à h).
+    Chaque case de l'échiquier est repérée par un couple de coordonnées
+    — une lettre et un nombre (ex : "a1", "h8", "d6").
+    Pour cette mission, nous ne nous préoccupons que des pions.
+    Un pion peut capturer une pièce de l'adversaire située en diagonale vers l'avant sur une ligne adjacente,
+    en se déplaçant sur cette case. Pour les pions blancs, les cases situées vers l'avant sont les cases dont 
+    le numéro de ligne est supérieur au numéro de ligne de leur propre case.
+</p>
+
+<p>
+  Un pion est une pièce vulnérable, mais chaque joueur en possède 8, ce qui peut permettre
+  de construire un mur de défense en pions. Avec cette stratégie, chaque pion défend les autres.
+  Un pion est en sécurité si un autre pion peut capturer une pièce qui se mettrait sur sa case.
+  Sur l'échiquier, seuls des pions blancs sont disposés.
+  Votre code doit calculer combien de pions sont en sécurité dans cette disposition.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" width="600px"/>
+    <img class="for_editor_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" width="380px"/>
+</p>
+
+<p>
+  Vous disposez de l'ensemble des coordonnées des cases où sont disposés les pions blancs.
+  Il vous faut compter combien de ces pions sont en sécurité.
+</p>
+<p>
+    <strong>Input: </strong> Coordonnées des pions blancs, comme ensemble (set) de chaînes de caractères (string).
+</p>
+
+<p>
+    <strong>Output: </strong> Le nombre de pions en sécurité (int).
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+    <pre class="brush: python">
+safe_pawns({"b4", "d4", "f4", "c3", "e3", "g5", "d2"}) == 6
+safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1</pre>
+<br>
+</div>
+
+<p class="for_info_only">
+    <strong>Utilisation: </strong>
+    Pour l'Intelligence Artificielle d'un jeu, un enjeu important est de savoir évaluer l'état de la partie.
+    Il s'agit ici de le faire, pour différentes positions des pièces les plus simples du jeu d'échecs.
+</p>
+
+<p>
+    <strong>Préconditions :</strong><br>
+    0 &lt; pawns &le; 8
+</p>
