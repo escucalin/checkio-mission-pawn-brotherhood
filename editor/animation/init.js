@@ -1,6 +1,6 @@
 //Dont change it
-requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
-    function (ext, $, TableComponent) {
+requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
+    function (extIO, $, TableComponent) {
 
         function ChessCanvas(dom) {
 
