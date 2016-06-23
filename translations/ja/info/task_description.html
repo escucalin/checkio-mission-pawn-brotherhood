@@ -43,8 +43,7 @@
 </p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" width="600px"/>
-    <img class="for_editor_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" width="380px"/>
+    <img class="for_info_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" style="max-height:260px"/>
 </p>
 
 <p>
@@ -72,10 +71,13 @@
     <p>
         <strong>例</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+safePawns(["b4", "d4", "f4", "c3", "e3", "g5", "d2"]) == 6
+safePawns(["b4", "c4", "d4", "e4", "f4", "g4", "e5"]) == 1
+{% else %}
 safe_pawns({"b4", "d4", "f4", "c3", "e3", "g5", "d2"}) == 6
-safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1</pre>
-<br>
+safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only">

@@ -19,5 +19,8 @@ api.add_listener(
             'python-27': cover,
             'python-3': cover
         },
-        function_name="safe_pawns"
+        function_name={
+            "python": "safe_pawns",
+            "js": "safePawns"
+        }
     ).on_ready)
