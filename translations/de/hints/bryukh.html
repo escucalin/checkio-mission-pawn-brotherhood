@@ -1,0 +1,56 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        Let's convert all the coordinates in indexes as a first step.
+
+<pre class="brush: python">
+pawns_indexes = set()
+for p in pawns:
+    row = int(p[1]) - 1
+    col = ord(p[0]) - 97
+    pawns_indexes.add((row, col))
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I need some help to proceed with the mission
+    </div>
+    <div class="answer">
+        Next iterate all of the pawns and check if it's safe to count.
+
+<pre class="brush: python">
+count = 0
+for row, col in pawns_indexes:
+    is_safe = ....
+    if is_safe:
+        count += 1
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I am gone half way through. Need help!
+    </div>
+    <div class="answer">
+        You can check if it's safe by calculating the "support" cells and checking if they're in our
+        set.
+<pre class="brush: python">
+is_safe = ((row - 1, col - 1) in pawns_indexes) or ((row - 1, col + 1) in pawns_indexes)
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I am stuck. I need a small hint.
+    </div>
+    <div class="answer">
+        Use the hints provided to create one function and return the "count" as the result.
+    </div>
+</div>
+
+
+</body>
