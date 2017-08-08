@@ -1,0 +1,84 @@
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}title.png" style="max-height: 350px">
+</div>
+<p>
+    Fast jeder auf der Welt kennt das uralte Spiel
+    <a href="https://de.wikipedia.org/wiki/Schach">Schach</a> und hat zumindest ein
+    grundlegendes Verständnis der Regeln. Bei diesem Spiel gibt es 6 verschiedene Figuren,
+    die sich nur nach bestimmten
+    <a href="https://de.wikipedia.org/wiki/Schach#Zugregeln">Zugregeln</a> bewegen dürfen.
+    Daraus ergibt sich eine weite Palette an möglichen Spielkonstellationen.
+    (siehe auch:
+        <a href="http://oeis.org/A048987">
+            Number of possible chess games at the end of the n-th plies
+        </a>)<br>
+    In dieser Aufgabe musst Du die Bewegungen und das Verhalten einer dieser Figuren unter
+    die Lupe nehmen.
+</p>
+
+<p>
+    Schach ist ein Zweispielerstrategiespiel.
+    Eine Schachpartie wird auf einem quadratischen Brett gespielt, das in 8 x 8 abwechselnd
+    schwarze und weiße quadratische Felder eingeteilt ist.
+    Die Zeilen werden als Reihen bezeichnet und mit den Zahlen 1 bis 8 beschschriftet,
+    während die Spalten als Linien bezeichnet und mit den Buchstaben a bis h beschriftet
+    werden.
+    So lässt sich jedem Feld ein eindeutiges Koordinatenpaar zuordnen - ein Buchstabe und
+    eine Zahl (z.B.: "a1", "h8", "d6").
+</p>
+
+<p>
+    Hier geht es ausschließlich um die Bauern.<br>
+    Ein Bauer kann eine gegnerische Figur auf einem Feld schlagen, das diagonal ein Feld vor
+    ihm liegt.
+    Im Fall eines weißen Bauern haben die vor ihm liegenden Felder eine höhere Reihennummer.<br>
+    Ein Bauer ist in der Regel eine schwache Figur, aber es gibt acht von ihnen und somit
+    kann man eine <a href="https://de.wikipedia.org/wiki/Bauernkette">Bauernkette</a> als
+    Verteidigung errichten.<br>
+    Bei dieser Strategie verteidigen die Bauern in den hinteren Reihen die Bauern vor ihnen.
+    Ein Bauer gilt als gedeckt, wenn ein anderer Bauer der gleichen Farbe, eine gegnerische
+    Figur auf dessen Feld schlagen könnte.<br>
+    Es befinden sich mehrere weiße Bauern auf dem Schachbrett - und zwar nur weiße Bauern!
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="pawns" src="{{MEDIA}}pawns.png" alt="pawns" style="max-height:260px"/>
+</p>
+
+<p>
+    Gegeben ist ein Set mit den Koordinaten der Felder, auf denen ein weißer Bauer platziert ist.
+    Du sollst herausfinden, wie viele dieser Bauern gedeckt sind.
+</p>
+<p>
+    <strong>Eingabe: </strong> Die Koordinaten der weißen Bauern als Set von Strings.
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Die Anzahl der gedeckten Bauern als ganze Zahl.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+safePawns(["b4", "d4", "f4", "c3", "e3", "g5", "d2"]) == 6
+safePawns(["b4", "c4", "d4", "e4", "f4", "g4", "e5"]) == 1
+{% else %}
+safe_pawns({"b4", "d4", "f4", "c3", "e3", "g5", "d2"}) == 6
+safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1
+{% endif %}
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu das gut ist:</strong><br>
+    Eines der wichtigsten Merkmale einer Spiele-KI ist die Fähigkeit die aktuelle
+    Spielsituation einschätzen zu können.<br>
+    Diese Aufgabe ist ein sehr simples Beispiel dafür, wie man eine solche Fähigkeit implementieren kann.
+</p>
+
+<p>
+    <strong>Bedingungen:</strong><br>
+    0 &lt; pawns &le; 8
+</p>
