@@ -1,4 +1,4 @@
-def safe_pawns(pawns):
+def safe_pawns(pawns: set) -> int:
     return 0
 
 if __name__ == '__main__':
